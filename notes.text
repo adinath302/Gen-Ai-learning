@@ -1,0 +1,18 @@
+GENERATIVE AI -
+
+1 - how LLM works ?
+    - 
+-  langchain_core.messages - AIMessage, SystemMessage, HumanMessage
+
+- everytime when you want to create an ai application for an specific task use "chat-prompt-templets"
+
+- chat-prompt-templets -
+        A ChatPromptTemplate is a reusable, fill-in-the-blank message structure used to talk to AI chat models (like in LangChain Core Reference).
+    Think of it like a script or a form letter: instead of writing a whole new conversation setup from scratch every time, you create a fixed pattern with empty slots (placeholders) that get filled with new data automatically.
+    It organizes messages by roles—such as:
+    • System: Setting the AI's personality or rules ("You are a helpful assistant named {name}").
+    • AI / Human: Storing past chat turns or history.
+    • User Input: The live question coming from the user ("{user_input}").
+
+timeframe : -
+03:06:00
