@@ -20,6 +20,19 @@ A prompt template consists of a string template. It accepts a set of parameters 
 
 The template can be formatted using either f-strings (default), jinja2, or mustache syntax.
 
+-  structured output - structured output means:  
+
+                        the AI response follows a fixed machine-readable format instated of natural language.like JSON 
+
+                        a feature that forces a Large Language Model (LLM) to return its answer as organized, machine-readable data—like a neat JSON object or a Python dictionary—instead of a long paragraph of conversational text.
+
+                        why to use -
+
+                                AI → JSON → Backend → API → Frontend
+
+                                Without structured output:
+
+                                AI breaks the system every time.
 
 timeframe : -
-03:06:00
+03:23:00

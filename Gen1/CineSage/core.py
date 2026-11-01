@@ -1,5 +1,5 @@
 # Prompt templates (CineSage Ai Project)
-
+import os
 from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chat_models import init_chat_model
@@ -11,7 +11,7 @@ model = init_chat_model (
    model_provider="google_genai",
 )
 
-prompt = ChatPromptTemplate.from_messages(
+prompt = ChatPromptTemplate.from_messages([
     # here is a role and it's templete
     ("system",
 """ 
@@ -92,10 +92,21 @@ Do not return JSON, XML, or programming code.
  """
 Extract movie information from this paragraph:\n\n{paragraph}
 """)
-)
+])
 
+# Automated file reader
+file_path = "c:/Code/Generative Ai/Gen1/CineSage/movie.txt"
 
-para = input("Give your paragraph : ")
+# This automatically handles checking if the file exists
+if not os.path.exists(file_path):
+    with open(file_path, "w", encoding="utf-8") as f:
+        f.write("Paste your full paragraph here.")
+    print(f"Empty file created! Please open '{file_path}', paste your movie description, save it, and run this script again.")
+else:
+    print(f"Reading movie data directly from: {file_path} ...")
+    with open(file_path, "r", encoding="utf-8") as f:
+        para = f.read()
+
 
 Final_Prompt = prompt.invoke(
     {"paragraph":para}
