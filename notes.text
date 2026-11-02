@@ -37,10 +37,33 @@ The template can be formatted using either f-strings (default), jinja2, or musta
                                 we gone use "Pydantic".
 
 -  Pydantic - 
+                Pydantic in Generative AI (Gen AI) acts as a strict data validation, structuring, and type-safety layer between unpredictable Large Language Models (LLMs) and reliable application code.
+
                 Pydantic is a security guard and rulebook for Generative AI. It makes sure that messy, unpredictable text coming out of an AI model matches an exact, clean shape your computer program can trust
 
                 BaseModel or TypeAdapter. It tells your code what structure, data types, and validation rules incoming or outgoing data must follow.
 
+                After using pydantic schema and Parser it will return the response like this - 
+                                ```json
+                                {
+                                "title": "Interstellar",
+                                "realease_year": 2014,
+                                "genre": [
+                                    "Science Fiction"
+                                ],
+                                "director": "Christopher Nolan",
+                                "cast": [
+                                    "Matthew McConaughey",
+                                    "Anne Hathaway",
+                                    "Jessica Chastain",
+                                    "Michael Caine"
+                                ],
+                                "rating": 8.6,
+                                "summary": "A group of astronauts travel through a wormhole near Saturn in search of a new home for humanity as Earth faces environmental collapse."
+                                }
+                                ```
+                So that we can create api of it and use in front-end as we want it
+                                
 
 timeframe : -
 03:23:00
