@@ -3,6 +3,20 @@ import os
 from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate
 from langchain.chat_models import init_chat_model
+# using pydantic it to create Schema
+from pydantic import BaseModel
+from typing import List,Optional
+
+# Schema for Ai -
+class Movie(BaseModel):
+    title:str
+    realease_year:Optional[int]
+    genre:List[str]
+    director:Optional[str]
+    cast:List[str]
+    rating:Optional[float]
+    summary:str
+
 
 load_dotenv()
 

@@ -24,15 +24,23 @@ The template can be formatted using either f-strings (default), jinja2, or musta
 
                         the AI response follows a fixed machine-readable format instated of natural language.like JSON 
 
-                        a feature that forces a Large Language Model (LLM) to return its answer as organized, machine-readable data—like a neat JSON object or a Python dictionary—instead of a long paragraph of conversational text.
+                        a feature th   at forces a Large Language Model (LLM) to return its answer as organized, machine-readable data—like a neat JSON object or a Python dictionary—instead of a long paragraph of conversational text.
 
                         why to use -
 
                                 AI → JSON → Backend → API → Frontend
 
-                                Without structured output:
+                                Without structured output( Proper object ):
 
                                 AI breaks the system every time.
+
+                                we gone use "Pydantic".
+
+-  Pydantic - 
+                Pydantic is a security guard and rulebook for Generative AI. It makes sure that messy, unpredictable text coming out of an AI model matches an exact, clean shape your computer program can trust
+
+                BaseModel or TypeAdapter. It tells your code what structure, data types, and validation rules incoming or outgoing data must follow.
+
 
 timeframe : -
 03:23:00
